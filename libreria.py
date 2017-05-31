@@ -10,6 +10,14 @@ class Libreria:
     def __init__(self):
         self.Libro = []
         self.Generos = {'1':[],'2':[],'3':[],'4':[],'5':[],'6':[],'7':[],'8':[]}
+'''
+    Utilizar un hash donde la llave es el genero o etiqueta:
+
+    {"gatos":[1,2,4,5,6],
+     "perros:": [34,66,232,6]}
+    Así podemos localizar rapidamente las imagenes en esa categoria
+
+'''
     def size(self):
         return len(self.Libro)
     def show(self):
@@ -57,7 +65,29 @@ class Libreria:
 
     def ElemenetosPorGenero(self,Genero):
             print len(Generos[Genero].values())
+
+'''
+Para la busqueda vamos a implementar una lista que contenga
+los diferentes generos agregados tu utilizar un diccionario(hash) con llave numerica
+pero seria mas adecuado utilizar llaves en minuscula y que en caso de que ya exista la llave se agregue
+unicamente la nueva imagen.
+
+
+'''
+
     def buscar(self,go_id,stop_id):
         for i in self.Libro:
             if i.Id >= go_id and i.Id<=stop_id:
                 print i
+
+
+'''
+En la interfase seria adecuado poder seleccionar las imagenes que no tienen etiquetas para asignarle, de manera
+que podemos dar clic en el nombre de la imagen, mostrarla y etiquetarla.
+
+'''
+
+
+'''
+Es necesario guardar la libreria en formato JSON
+'''

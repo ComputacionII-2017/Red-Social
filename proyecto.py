@@ -10,3 +10,7 @@ for (path,ficheros,archivo) in walk(path):
         A[i]=[]
         for j in lista2:
             A[i].append(j)
+
+'''
+Aqui hay que llamar a la interfase en Tkinter
+'''
